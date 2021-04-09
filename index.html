@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="author" content="hermitpopcorn">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<header>
+		<h1>授業表</h1>
+	</header>
+	<main>
+		<table>
+			<thead>
+				<tr>
+					<td>限目</td>
+					<td class="head-day" id="head-day-1">月</td>
+					<td class="head-day" id="head-day-2">火</td>
+					<td class="head-day" id="head-day-3">水</td>
+					<td class="head-day" id="head-day-4">木</td>
+					<td class="head-day" id="head-day-5">金</td>
+				</tr>
+			</thead>
+			<tbody id="classes-container">
+			</tbody>
+		</table>
+	</main>
+	<section id="settings">
+		<a id="settings-toggle" href="javascript:;">設定</a>
+		<div id="settings-form" style="display: none">
+			<form onsubmit="event.preventDefault(); saveSettings();">
+				<p>ここで授業設定のjsonを入力してください</p>
+				<div>
+					<textarea id="json-input"></textarea>
+				</div>
+				<div>
+					<input type="submit">
+				</div>
+			</form>
+		</div>
+	</section>
+
+	<script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
