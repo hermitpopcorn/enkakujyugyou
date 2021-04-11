@@ -54,6 +54,8 @@ var loadSettings = () => {
 	} else {
 		classes = JSON.parse(classes);
 	}
+
+	document.querySelector("#settings form textarea").value = JSON.stringify({ "classTimes": classTimes, "classes": classes }, null, 4);
 };
 
 var saveSettings = () => {
