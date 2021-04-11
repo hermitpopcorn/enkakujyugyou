@@ -106,9 +106,9 @@ var assembleTable = () => {
 		let numbering = document.createElement("td");
 		numbering.classList.add("numbering");
 		let numberingIndex = document.createElement("p");
-		numberingIndex.textContent = time;
+		numberingIndex.innerHTML = time;
 		let numberingTime = document.createElement("p");
-		numberingTime.textContent = classTimes[time]["start"] + " ~ " + classTimes[time]["end"];
+		numberingTime.innerHTML = classTimes[time]["start"] + " ~ " + classTimes[time]["end"];
 
 		numbering.appendChild(numberingIndex);
 		numbering.appendChild(numberingTime);
@@ -124,21 +124,21 @@ var assembleTable = () => {
 					let classContainer = document.createElement("article");
 
 					let className = document.createElement("h3");
-					className.textContent = i.name;
+					className.innerHTML = i.name;
 					classContainer.appendChild(className);
 
 					let classTeacher = document.createElement("p");
-					classTeacher.textContent = i.teacher;
+					classTeacher.innerHTML = i.teacher;
 					classTeacher.classList.add("teacher-name");
 					classContainer.appendChild(classTeacher);
 
 					if (i.link) {
 						let classLink = document.createElement("a");
 						if (typeof i.link == "string") {
-							classLink.textContent = i.link;
+							classLink.innerHTML = i.link;
 							classLink.setAttribute("href", i.link);
 						} else if (typeof i.link == "object") {
-							classLink.textContent = i.link.info;
+							classLink.innerHTML = i.link.info;
 							classLink.setAttribute("href", i.link.url);
 						}
 						classContainer.appendChild(classLink);
